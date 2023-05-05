@@ -109,5 +109,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-echo linked dot file
+echo linked dotfiles
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff5fdf,underline"
