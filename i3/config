@@ -194,9 +194,9 @@ bindsym $mod+r mode "resize"
 
 #colorchemes
 # class                 border 	 	bground	 	text    	indicator 	child_border
-client.focused          #f20df2	 	#f20df2	 	#FFFFFF 	#2E9EF4   	#285577
+client.focused          #00afaf	 	#00afaf	 	#000000 	#00afaf   	#00afaf
 client.focused_inactive #790679	 	#790679	 	#FFFFFF 	#484E50   	#5F676A
-client.unfocused        #00ffff	 	#00ffff	 	#888888 	#292D2E   	#222222
+client.unfocused        #af0eaf	 	#af0eaf	 	#FFFFFF 	#af0eaf   	#af0eaf
 client.urgent           #2F343A	 	#900000	 	#FFFFFF 	#900000   	#900000
 client.placeholder      #000000	 	#0C0C0C	 	#FFFFFF 	#000000   	#0C0C0C
 
@@ -220,7 +220,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 #open unikey
 exec_always fcitx5
 #install background
-exec_always feh --bg-scale --zoom fill ~/Downloads/bg1.jpg
+exec_always feh --bg-scale --zoom fill  --randomize  ~/dotfiles/wp
 #polybar
 exec_always ~/.config/polybar/lauch.sh
 #nightlight
