@@ -1,6 +1,0 @@
-2023/04/30-21:48:40.634 375e Reusing MANIFEST /home/kokoss/.config/tetrio-desktop/Local Storage/leveldb/MANIFEST-000001
-2023/04/30-21:48:40.635 375e Recovering log #4
-2023/04/30-21:48:40.639 375e Reusing old log /home/kokoss/.config/tetrio-desktop/Local Storage/leveldb/000004.log 
-2023/04/30-21:49:43.989 3a65 Level-0 table #8: started
-2023/04/30-21:49:44.009 3a65 Level-0 table #8: 304141 bytes OK
-2023/04/30-21:49:44.016 3a65 Delete type=0 #4

@@ -1,6 +1,0 @@
-[Default Applications]
-x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
-video/x-matroska=vlc.desktop
-
-[Added Associations]
-video/x-matroska=vlc.desktop;

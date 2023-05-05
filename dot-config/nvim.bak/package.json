@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "clangd": "^0.0.0",
-    "coc-clangd": "^0.28.0",
-    "coc.nvim": "^0.0.83-next.9",
-    "neovim": "^4.10.1",
-    "yarn": "^1.22.19"
-  }
-}
