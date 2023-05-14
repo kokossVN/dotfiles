@@ -49,18 +49,29 @@ vim.keymap.set('i','jk','<ESC>:w<CR>')
 ----------------------------------------------------------------------------- leader-guide
 
 
------------------------------------------------------------------------------Neo tree
+----------------------------------------------------------------------------- Neo tree
 
 vim.keymap.set('n', '<Leader>nt',':Neotree toggle<cr>',{silent = true}) 
 vim.keymap.set('n', '<Leader>t',':NeoTreeReveal<cr>',{silent = true}) 
 vim.keymap.set('n', '<F8>',':Neotree toggle<cr>',{silent = true}) 
------------------------------------------------------------------------------ Floaterm
-vim.keymap.set('n', '<F7>', ':FloatermToggle<CR>', {silent = true })
-vim.keymap.set('t', '<F7>', '<C-\\><C-n>:FloatermToggle<CR>', { silent = true })
-vim.keymap.set('n', '<Leader>/', ':FloatermToggle<CR>', {silent = true })
-vim.keymap.set('n', '<F6>', ':FloatermNew --position=center --height=0.89 --width=0.79<CR>', {silent = true })
-vim.keymap.set('t', '<F8>', '<C-\\><C-n>:FloatermToggle<CR>', { silent = true })
-vim.keymap.set('t', '<C-n>', '<C-\\><C-n>:FloatermNew<CR>', { silent = true })
-vim.keymap.set('t', '<C-l>', '<C-\\><C-n>:FloatermNext<CR>', { silent = true })
-vim.keymap.set('t', '<C-h>', '<C-\\><C-n>:FloatermPrev<CR>', { silent = true })
-vim.keymap.set('t', '<C-w>', '<C-\\><C-n>:FloatermKill<CR>:FloatermPrev<CR>', { silent = true })
+
+
+----------------------------------------------------------------------------- Toggleterm
+vim.keymap.set('n', '<F7>', '<Cmd>exe v:count1 . "ToggleTerm"<CR>', { silent = true })
+vim.keymap.set('t', '<F7>', '<Cmd>exe v:count1 . "ToggleTerm"<CR>', { silent = true })
+vim.keymap.set('i', '<F7>', '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', { silent = true })
+
+
+
+----------------------------------------------------------------------------- Floaterm (deleted)
+-- vim.keymap.set('n', '<F7>', ':FloatermToggle<CR>', {silent = true })
+-- vim.keymap.set('t', '<F7>', '<C-\\><C-n>:FloatermToggle<CR>', { silent = true })
+-- vim.keymap.set('n', '<Leader>/', ':FloatermToggle<CR>', {silent = true })
+-- vim.keymap.set('n', '<F6>', ':FloatermNew --position=center --height=0.89 --width=0.79<CR>', {silent = true })
+-- vim.keymap.set('t', '<F8>', '<C-\\><C-n>:FloatermToggle<CR>', { silent = true })
+-- vim.keymap.set('t', '<C-n>', '<C-\\><C-n>:FloatermNew<CR>', { silent = true })
+-- vim.keymap.set('t', '<C-l>', '<C-\\><C-n>:FloatermNext<CR>', { silent = true })
+-- vim.keymap.set('t', '<C-h>', '<C-\\><C-n>:FloatermPrev<CR>', { silent = true })
+-- vim.keymap.set('t', '<C-w>', '<C-\\><C-n>:FloatermKill<CR>:FloatermPrev<CR>', { silent = true })
+
+

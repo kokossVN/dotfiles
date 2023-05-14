@@ -2,7 +2,8 @@ require('config') ------------------------------- Away load frist
 require('PluginConfigs.lazy') ------------------- Plugin Manager
 require('PluginConfigs.mason') ------------------ Language config
 require('PluginConfigs.neotree') ---------------- Nerd tree
-require('PluginConfigs.floaterm') --------------- Pop-up terminal
+-- require('PluginConfigs.floaterm') --------------- Pop-up terminal
+require('PluginConfigs.toggleterm') --------------- Pop-up terminal
 require('PluginConfigs.lualine') ---------------- Status bar
 -- require('PluginConfigs.coc') -------------------- Auto Complete
 require("PluginConfigs/cmp")

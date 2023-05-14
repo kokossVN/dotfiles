@@ -42,7 +42,7 @@ require("lazy").setup({
   },
   {'williamboman/mason-lspconfig.nvim'}, ------------------------------------ mason to nvim Language support protocol
   ------------PopupTerminal--------------------------------------------------
-  {"voldikss/vim-floaterm"},
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
   ------------fzf-fuzzy-finder-----------------------------------------------
   {"vijaymarupudi/nvim-fzf"},
   { 'ibhagwan/fzf-lua'},
