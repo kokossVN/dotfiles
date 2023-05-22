@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/Downloads/alacritty-master/dracula.yml
+  - ~/dotfiles/alacritty/alacritty-theme/dracula/dracula.yml
 
 
 # Any items in the `env` entry below will be added as
