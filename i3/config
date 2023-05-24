@@ -101,10 +101,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-#bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
+# bindsym $mod+Ctrl+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -189,7 +189,20 @@ bindsym $mod+r mode "resize"
 # 	height 25
 # }
 #
-# This config created by Kokoss!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+############################This config created by Kokoss!!!###################### 
 
 
 #colorchemes
@@ -236,6 +249,15 @@ bindsym $mod+Ctrl+l exec betterlockscreen -l dim
 bindsym $mod+Ctrl+e exec nautilus
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
+###############Maximize-Minimize############
+
+bindsym $mod+Ctrl+Up floating toggle
+bindsym $mod+Ctrl+Down move scratchpad
+bindsym $mod+Ctrl+/  scratchpad show, floating toggle
+
+
+
+
 # assign app to workspaces##################
 assign [class="Spotify"] $ws5
 assign [class="TeamViewer"] $ws10
@@ -244,3 +266,14 @@ default_border pixel 2
 hide_edge_borders smart
 smart_gaps on
 gaps inner 7
+
+
+
+
+
+###############Floating Windows#############
+# for_window [class="Alacritty"] floating enable
+for_window [class="Steam"] floating enable
+
+
+
