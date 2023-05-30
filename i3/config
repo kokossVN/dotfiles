@@ -204,14 +204,17 @@ bindsym $mod+r mode "resize"
 
 ############################This config created by Kokoss!!!###################### 
 
-
+#theme using : Dracula :
 #colorchemes
 # class                 border 	 	bground	 	text    	indicator 	child_border
-client.focused          #00afaf	 	#00afaf	 	#000000 	#00afaf   	#00afaf
-client.focused_inactive #790679	 	#790679	 	#FFFFFF 	#484E50   	#5F676A
-client.unfocused        #af0eaf	 	#af0eaf	 	#FFFFFF 	#af0eaf   	#af0eaf
-client.urgent           #2F343A	 	#900000	 	#FFFFFF 	#900000   	#900000
-client.placeholder      #000000	 	#0C0C0C	 	#FFFFFF 	#000000   	#0C0C0C
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
 
 # ScreenShort-cut###########################
 # Screenshots
@@ -253,7 +256,7 @@ bindsym $mod+Ctrl+Right workspace next
 
 bindsym $mod+Ctrl+Up floating toggle
 bindsym $mod+Ctrl+Down move scratchpad
-bindsym $mod+Ctrl+/  scratchpad show, floating toggle
+bindsym $mod+Ctrl+space  scratchpad show, floating toggle
 
 
 
