@@ -242,8 +242,11 @@ exec_always ~/.config/polybar/lauch.sh
 #nightlight
 exec_always redshift -P -O 2950
 #picom 
-exec_always picom --config ~/dotfiles/picom.conf
+exec_always picom --config ~/dotfiles/picom.conf 
 #start teamviewer daemon
+#This command will lauch when laptop connect to another screen
+exec_always ~/dotfiles/i3/screen_fix/fixscreen.sh
+
 # exec_always alacritty -e teamviewer -daemon start
 # keybinding ###############################
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh
@@ -252,12 +255,12 @@ bindsym $mod+Ctrl+l exec betterlockscreen -l dim
 bindsym $mod+Ctrl+e exec nautilus
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
+# bindsym $mod+n		exec lotion-native
 ###############Maximize-Minimize############
 
 bindsym $mod+Ctrl+Up floating toggle
 bindsym $mod+Ctrl+Down move scratchpad
 bindsym $mod+Ctrl+space  scratchpad show, floating toggle
-
 
 
 

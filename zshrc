@@ -24,6 +24,6 @@ source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-echo linked dotfiles
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff5fdf,underline"
-
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
+# neofetch
+echo linked dot file
