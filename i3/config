@@ -254,6 +254,8 @@ bindsym $mod+Ctrl+l exec betterlockscreen -l dim
 
 bindsym $mod+Ctrl+e exec nautilus
 bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+K workspace prev
+bindsym $mod+Ctrl+J workspace next
 bindsym $mod+Ctrl+Right workspace next
 # bindsym $mod+n		exec lotion-native
 ###############Maximize-Minimize############
