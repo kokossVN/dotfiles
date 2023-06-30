@@ -46,7 +46,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty 
@@ -245,7 +245,7 @@ exec_always redshift -P -O 2950
 exec_always picom --config ~/dotfiles/picom.conf 
 #start teamviewer daemon
 #This command will lauch when laptop connect to another screen
-exec_always ~/dotfiles/i3/screen_fix/fixscreen.sh
+exec_always ~/dotfiles/i3/feature/2screen_setup.sh
 
 # exec_always alacritty -e teamviewer -daemon start
 # keybinding ###############################
