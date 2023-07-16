@@ -1,7 +1,9 @@
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+source ~/.bashrc		#link bashrc
+source ~/dotfiles/bash_customalias.sh
 source ~/zsh-snap/znap.zsh
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -26,4 +28,3 @@ source $ZSH/oh-my-zsh.sh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
 # neofetch
-echo linked dot file

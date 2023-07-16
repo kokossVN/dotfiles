@@ -269,6 +269,9 @@ bindsym $mod+Ctrl+space  scratchpad show, floating toggle
 # assign app to workspaces##################
 assign [class="Spotify"] $ws5
 assign [class="TeamViewer"] $ws10
+
+
+
 ############################################
 default_border pixel 2
 hide_edge_borders smart
@@ -282,6 +285,8 @@ gaps inner 7
 ###############Floating Windows#############
 # for_window [class="Alacritty"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="PacketTracer"] floating enable
 
+for_window [title="tetrio-desktop" window_role="browser-window"] floating enable
 
 

@@ -11,7 +11,6 @@
 
 
 
-
 ----------------------------------Leader-------------------------------------
 
 
@@ -21,7 +20,7 @@ vim.g.maplocalleader = ' '
 ----------------------------------Nvimconfig---------------------------------
 
 --change font
-vim.opt.guifont = { "FiraCode_Nerd_Font_Mono"}
+vim.opt.guifont = {"FiraCode_Nerd_Font_Mono"}
 --line number
 vim.opt.number = true
 --enable mouse in neovim
@@ -38,32 +37,44 @@ vim.opt.updatetime = 300
 vim.opt.signcolumn = "yes"
 vim.opt.tm = 300
 
-----------------------------------Keymap-------------------------------------
+-- Keymap
 
 
-vim.keymap.set('i','jk','<ESC>:w<CR>')
+vim.keymap.set('i','jk','<ESC>')
+vim.keymap.set('n','s','<>')
 
 
------------------------------Other Plugin Keymap-----------------------------
------------------------------------------------------------------------------ Telescope
------------------------------------------------------------------------------ leader-guide
+
+-- split workspace
+vim.keymap.set('n', 'sv', ':vsplit<CR>')
+-- move cusor
+vim.keymap.set('n','sl','<C-w>l')
+vim.keymap.set('n','sh','<C-w>h')
+vim.keymap.set('n','sj','<C-w>j')
+vim.keymap.set('n','sk','<C-w>k')
+--move cusor for arrow key
+vim.keymap.set('n','s<Right>','<C-w>l')
+vim.keymap.set('n','s<Left>','<C-w>h')
+vim.keymap.set('n','s<Down>','<C-w>j')
+vim.keymap.set('n','s<Up>','<C-w>k')
 
 
------------------------------------------------------------------------------ Neo tree
-
+-- tab view
+vim.keymap.set('n','<Tab>',':tabnext<CR>')
+vim.keymap.set('n','<S-Tab>',':tabprevious<CR>')
+-- Other Plugin Keymap
+-- Neo tree
 vim.keymap.set('n', '<Leader>nt',':Neotree toggle<cr>',{silent = true}) 
 vim.keymap.set('n', '<Leader>t',':NeoTreeReveal<cr>',{silent = true}) 
 vim.keymap.set('n', '<F8>',':Neotree toggle<cr>',{silent = true}) 
 
 
------------------------------------------------------------------------------ Toggleterm
+--Toggleterm
 vim.keymap.set('n', '<F7>', '<Cmd>exe v:count1 . "ToggleTerm"<CR>', { silent = true })
 vim.keymap.set('t', '<F7>', '<Cmd>exe v:count1 . "ToggleTerm"<CR>', { silent = true })
 vim.keymap.set('i', '<F7>', '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', { silent = true })
 
-
-
------------------------------------------------------------------------------ Floaterm (deleted)
+-- Floaterm (deleted)
 -- vim.keymap.set('n', '<F7>', ':FloatermToggle<CR>', {silent = true })
 -- vim.keymap.set('t', '<F7>', '<C-\\><C-n>:FloatermToggle<CR>', { silent = true })
 -- vim.keymap.set('n', '<Leader>/', ':FloatermToggle<CR>', {silent = true })
