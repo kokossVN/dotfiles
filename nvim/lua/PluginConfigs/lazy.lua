@@ -89,8 +89,9 @@ require("lazy").setup({
  {'hrsh7th/vim-vsnip'},
 
   ------------ Colorizer for display color on hex and RGB code----------------
-  {'NvChad/nvim-colorizer.lua'},
+ {'NvChad/nvim-colorizer.lua'},
 
-
+  ------------ Tmux navigator-------------------------------------------------
+ {'christoomey/vim-tmux-navigator'}
 
   })

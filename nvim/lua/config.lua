@@ -62,6 +62,9 @@ vim.keymap.set('n','s<Up>','<C-w>k')
 -- tab view
 vim.keymap.set('n','<Tab>',':tabnext<CR>')
 vim.keymap.set('n','<S-Tab>',':tabprevious<CR>')
+
+
+
 -- Other Plugin Keymap
 -- Neo tree
 vim.keymap.set('n', '<Leader>nt',':Neotree toggle<cr>',{silent = true}) 
@@ -86,3 +89,14 @@ vim.keymap.set('i', '<F7>', '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', { silen
 -- vim.keymap.set('t', '<C-w>', '<C-\\><C-n>:FloatermKill<CR>:FloatermPrev<CR>', { silent = true })
 
 
+--Tmux Navigator
+
+vim.keymap.set('n','<C-h>',':TmuxNavigateLeft<CR>',{silent = true})
+vim.keymap.set('n','<C-j>',':TmuxNavigateDown<CR>',{silent = true})
+vim.keymap.set('n','<C-k>',':TmuxNavigateUp<CR>',{silent = true})
+vim.keymap.set('n','<C-l>',':TmuxNavigateRight<CR>',{silent = true})
+
+vim.keymap.set('n','<C-Left>',':TmuxNavigateLeft<CR>',{silent = true})
+vim.keymap.set('n','<C-Down>',':TmuxNavigateDown<CR>',{silent = true})
+vim.keymap.set('n','<C-Up>',':TmuxNavigateUp<CR>',{silent = true})
+vim.keymap.set('n','<C-Right>',':TmuxNavigateRight<CR>',{silent = true})
