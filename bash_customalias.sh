@@ -10,3 +10,6 @@ alias lazygit='git add .&&
 	git commit -m "smail change" &&
 	git push
 '
+alias ls='lsd'
+alias l='lsd -Fl'
+alias ide='~/dotfiles/custom_bash/tmux-ide.sh'

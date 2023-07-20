@@ -3,7 +3,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 source ~/.bashrc		#link bashrc
-source ~/dotfiles/bash_customalias.sh
 source ~/zsh-snap/znap.zsh
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -23,6 +22,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/dotfiles/bash_customalias.sh
+
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
