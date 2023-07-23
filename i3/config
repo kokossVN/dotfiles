@@ -240,7 +240,7 @@ exec_always feh --bg-scale --zoom fill  --randomize  ~/dotfiles/wp
 #polybar
 exec_always ~/.config/polybar/lauch.sh
 #nightlight
-exec_always redshift -P -O 2950
+exec_always redshift -P -O 2257
 #picom 
 exec_always picom --config ~/dotfiles/picom.conf 
 #start teamviewer daemon

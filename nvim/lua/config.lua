@@ -36,7 +36,8 @@ vim.opt.updatetime = 300
 -- diagnostics appeared/became resolved
 vim.opt.signcolumn = "yes"
 vim.opt.tm = 300
-
+-- set os clipboard
+vim.api.nvim_set_option("clipboard","unnamedplus")
 -- Keymap
 
 
@@ -45,7 +46,7 @@ vim.keymap.set('n','s','<>')
 
 
 
--- split workspace
+-- split workspac
 vim.keymap.set('n', 'sv', ':vsplit<CR>')
 -- move cusor
 vim.keymap.set('n','sl','<C-w>l')
