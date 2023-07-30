@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ -z "$*" ]
+then
+	echo wtf is notting ???
+	read -p "Type your massage"
+	mess=$REPLY
+else
+	mess="$*"
+fi
+
+
+echo \
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>$mess</title>
+</head>
+<body>
+	<p>Hello $mess.html</p>
+</body>
+</html>" > "$mess".html
+echo created "$mess.html"
+

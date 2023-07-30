@@ -12,4 +12,4 @@ alias l='lsd -Fl'
 alias ide='~/dotfiles/custom_bash/tmux-ide.sh'
 alias tree="lsd --tree -X"
 alias lazyweb="~/dotfiles/custom_bash/lazyweb.sh"
-alias lazyhtml="~/dotfiles/custom_bash/lazyhtml.sh"
+alias html="~/dotfiles/custom_bash/html.sh"
