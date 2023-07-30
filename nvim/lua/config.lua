@@ -40,7 +40,10 @@ vim.opt.tm = 300
 vim.api.nvim_set_option("clipboard","unnamedplus")
 -- Keymap
 
-
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+-- vim.opt.expandtab = 1
+print("loaded")
 vim.keymap.set('i','jk','<ESC>')
 vim.keymap.set('n','s','<>')
 

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+
+
 if [ -z "$*" ]
 then
 	echo wtf is notting ???
@@ -9,5 +11,6 @@ else
 	mess="$*"
 fi
 
+
+
 echo "$mess"
-git add . && git commit -m "$mess" && git push
