@@ -63,10 +63,10 @@ bindsym $mod+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -87,7 +87,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -164,10 +164,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 50 px or 10 ppt
-        bindsym k resize grow height 50 px or 10 ppt
-        bindsym l resize shrink height 50 px or 10 ppt
-        bindsym semicolon resize grow width 50 px or 10 ppt
+        bindsym h resize shrink width 50 px or 10 ppt
+        bindsym j resize grow height 50 px or 10 ppt
+        bindsym k resize shrink height 50 px or 10 ppt
+        bindsym l resize grow width 50 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 50 px or 10 ppt
@@ -251,13 +251,15 @@ exec_always ~/dotfiles/i3/feature/2screen_setup.sh
 # keybinding ###############################
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh
 bindsym $mod+Ctrl+l exec betterlockscreen -l dim
-
 bindsym $mod+Ctrl+e exec nautilus
+
 bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+K workspace prev
-bindsym $mod+Ctrl+J workspace next
 bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+k workspace next
+bindsym $mod+Ctrl+j workspace prev
 # bindsym $mod+n		exec lotion-native
+
+bindsym $mod+Tab workspace next
 ###############Maximize-Minimize############
 
 bindsym $mod+Ctrl+Up floating toggle

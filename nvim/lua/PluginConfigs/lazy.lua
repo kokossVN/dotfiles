@@ -2,9 +2,9 @@
 --        / /   /   /__  /\ \/ /     / | / / |  / /  _/  |/  /
 --       / /   / /| | / /  \  /_____/  |/ /| | / // // /|_/ / 
 --      / /___/ ___ |/ /__ / /_____/ /|  / | |/ // // /  / /  
---     /_____/_/  |_/____//_/     /_/ |_/  |___/___/_/  /_/   
+--     /_____/_/  |_/____//_/     /_/ |_/  |___/___/_/  /_/   lazy
 
--------------- install lazy--------------------------------------------------
+-- install lazy--
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", ------------------------------------------------------ latest stable release
+    "--branch=stable", -- latest stable release
     lazypath,
   })
 end
@@ -21,48 +21,61 @@ vim.opt.rtp:prepend(lazypath)
 
 
 
---------------install plugins------------------------------------------------
+--install plugins--
 require("lazy").setup({
+	--Neo tree ---
 	{
   "nvim-neo-tree/neo-tree.nvim",
-    dependencies = { 
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     }
   },
-  ------------Status linsns -------------------------------------------------
+  --Status line --
   {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
   },
- ------------Language plugins------------------------------------------------
+	{
+		'akinsho/bufferline.nvim', version = "*",
+		-- dependencies = 'nvim-tree/nvim-web-devicons'
+	},
+	
+ --Language plugins--
   {
   "williamboman/mason.nvim",
-  build = ":MasonUpdate" -------------------------------------------------- :MasonUpdate updates registry contents
+  build = ":MasonUpdate" -- :MasonUpdate updates registry contents
   },
-  {'williamboman/mason-lspconfig.nvim'}, ------------------------------------ mason to nvim Language support protocol
-  ------------PopupTerminal--------------------------------------------------
+  {'williamboman/mason-lspconfig.nvim'}, -- mason to nvim Language server protocol
+	
+  --PopupTerminal--
   {'akinsho/toggleterm.nvim', version = "*", config = true},
-  ------------fzf-fuzzy-finder-----------------------------------------------
+
+  --fzf-fuzzy-finder--
   {"vijaymarupudi/nvim-fzf"},
   { 'ibhagwan/fzf-lua'},
   { 'junegunn/fzf', build = './install --bin', },
-  ------------Themes-Colorchemes---------------------------------------------
+
+  --Themes-Colorchemes--
   { "catppuccin/nvim", name = "catppuccin" },
   {"Mofiqul/dracula.nvim"},
-  ------------telescope------------------------------------------------------
+
+  --telescope--
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
       dependencies = { 'nvim-lua/plenary.nvim',
       "debugloop/telescope-undo.nvim",}
   },
-  ------------Treesitter-----------------------------------------------------
+
+  --Treesitter--
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-  ------------Auto Tag-------------------------------------------------------
+
+  --Auto Tag--
   {'windwp/nvim-ts-autotag'},
-  ------------Auto Close-----------------------------------------------------
+
+  --Auto Close--
   {'m4xshen/autoclose.nvim'},
-  ------------Leader Guide---------------------------------------------------
+  --Leader Guide--
   {
     "folke/which-key.nvim",
     config = function()
@@ -70,28 +83,35 @@ require("lazy").setup({
       vim.o.timeoutlen = 300
     end,
   },
-   ------------Comment gcc&gc-------------------------------------------------
+
+   --Comment gcc&gc--
   {'terrortylor/nvim-comment'},
-  ------------Visual line when tab -------------------------------------------
+
+  --Visual line when tab --
   { "lukas-reineke/indent-blankline.nvim" },
 
-  ------------Lsqcongfig for cpm----------------------------------------------
-  ------------ all plugin for install cpm-------------------------------------
- {'neovim/nvim-lspconfig'},
- {'hrsh7th/cmp-nvim-lsp'},
- {'hrsh7th/cmp-buffer'},
- {'hrsh7th/cmp-path'},
- {'hrsh7th/cmp-cmdline'},
- {'hrsh7th/nvim-cmp'},
- {'dcampos/nvim-snippy'},
- {'dcampos/cmp-snippy'},
- {'hrsh7th/cmp-vsnip'},
- {'hrsh7th/vim-vsnip'},
+  --Lsqcongfig for cpm--
+  -- all plugin for install cpm--
+	{'neovim/nvim-lspconfig'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/cmp-buffer'},
+	{'hrsh7th/cmp-path'},
+	{'hrsh7th/cmp-cmdline'},
+	{'hrsh7th/nvim-cmp'},
+	{'dcampos/nvim-snippy'},
+	{'dcampos/cmp-snippy'},
+	{'hrsh7th/cmp-vsnip'},
+	{'hrsh7th/vim-vsnip'},
 
-  ------------ Colorizer for display color on hex and RGB code----------------
- {'NvChad/nvim-colorizer.lua'},
+	-- Nvim-dev --
+	{ "folke/neodev.nvim", opts = {} },
+		-- Colorizer for display color on hex and RGB code--
+	{'NvChad/nvim-colorizer.lua'},
 
-  ------------ Tmux navigator-------------------------------------------------
- {'christoomey/vim-tmux-navigator'}
+		-- Tmux navigator--
+	{'christoomey/vim-tmux-navigator'},
 
+	-- Debuger --
+	{'rcarriga/nvim-dap-ui'},
+	{'mfussenegger/nvim-dap'},
   })

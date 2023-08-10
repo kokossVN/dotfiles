@@ -38,12 +38,14 @@ vim.opt.signcolumn = "yes"
 vim.opt.tm = 300
 -- set os clipboard
 vim.api.nvim_set_option("clipboard","unnamedplus")
--- Keymap
-
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 -- vim.opt.expandtab = 1
-print("loaded")
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+
+
+-- Keymap
 vim.keymap.set('i','jk','<ESC>')
 vim.keymap.set('n','s','<>')
 
@@ -51,11 +53,6 @@ vim.keymap.set('n','s','<>')
 
 -- split workspac
 vim.keymap.set('n', 'sv', ':vsplit<CR>')
--- move cusor
-vim.keymap.set('n','sl','<C-w>l')
-vim.keymap.set('n','sh','<C-w>h')
-vim.keymap.set('n','sj','<C-w>j')
-vim.keymap.set('n','sk','<C-w>k')
 --move cusor for arrow key
 vim.keymap.set('n','s<Right>','<C-w>l')
 vim.keymap.set('n','s<Left>','<C-w>h')
@@ -64,15 +61,14 @@ vim.keymap.set('n','s<Up>','<C-w>k')
 
 
 -- tab view
-vim.keymap.set('n','<Tab>',':tabnext<CR>')
-vim.keymap.set('n','<S-Tab>',':tabprevious<CR>')
+vim.keymap.set('n','<Tab>',':tabnext<CR>', {silent = true})
+vim.keymap.set('n','<S-Tab>',':tabprevious<CR>', {silent = true})
 
 
 
 -- Other Plugin Keymap
 -- Neo tree
-vim.keymap.set('n', '<Leader>nt',':Neotree toggle<cr>',{silent = true}) 
-vim.keymap.set('n', '<Leader>t',':NeoTreeReveal<cr>',{silent = true}) 
+vim.keymap.set('n', '<Leader>t',':Neotree toggle<cr>',{silent = true}) 
 vim.keymap.set('n', '<F8>',':Neotree toggle<cr>',{silent = true}) 
 
 
