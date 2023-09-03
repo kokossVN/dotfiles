@@ -28,7 +28,6 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
 
-tmux source ~/.config/tmux/tmux.conf
 # neofetch
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -43,33 +43,34 @@ vim.opt.shiftwidth = 2
 -- vim.opt.expandtab = 1
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
-
-
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 -- Keymap
 vim.keymap.set('i','jk','<ESC>')
 vim.keymap.set('n','s','<>')
 
-
-
--- split workspac
+-- split workspace
 vim.keymap.set('n', 'sv', ':vsplit<CR>')
 --move cusor for arrow key
-vim.keymap.set('n','s<Right>','<C-w>l')
-vim.keymap.set('n','s<Left>','<C-w>h')
-vim.keymap.set('n','s<Down>','<C-w>j')
-vim.keymap.set('n','s<Up>','<C-w>k')
+vim.keymap.set('n','sl','<C-w>l')
+vim.keymap.set('n','sh','<C-w>h')
+vim.keymap.set('n','sj','<C-w>j')
+vim.keymap.set('n','sk','<C-w>k')
+
 
 
 -- tab view
 vim.keymap.set('n','<Tab>',':tabnext<CR>', {silent = true})
 vim.keymap.set('n','<S-Tab>',':tabprevious<CR>', {silent = true})
+vim.keymap.set('n','<Leader>nt',':tabnew<CR>', {silent = true})
 
-
-
+--Move cusor in insert mode
+vim.keymap.set('i','<A-h>','<Left>')
+vim.keymap.set('i','<A-j>','<Down>')
+vim.keymap.set('i','<A-k>','<Up>')
+vim.keymap.set('i','<A-l>','<Right>')
 -- Other Plugin Keymap
 -- Neo tree
-vim.keymap.set('n', '<Leader>t',':Neotree toggle<cr>',{silent = true}) 
-vim.keymap.set('n', '<F8>',':Neotree toggle<cr>',{silent = true}) 
+vim.keymap.set('n', '<Leader>t',':Neotree toggle<cr>',{silent = true})
 
 
 --Toggleterm

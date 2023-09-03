@@ -75,10 +75,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -227,7 +227,7 @@ bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(d
 
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym Mod1+Ctrl+Shift+S exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # Load on boot##############################
 
@@ -264,8 +264,10 @@ bindsym $mod+Tab workspace next
 
 bindsym $mod+Ctrl+Up floating toggle
 bindsym $mod+Ctrl+Down move scratchpad
-bindsym $mod+Ctrl+space  scratchpad show, floating toggle
-
+bindsym $mod+Ctrl+space  scratchpad show
+bindsym $mod+Shift+n  scratchpad show, floating toggle
+bindsym $mod+n move scratchpad
+bindsym $mod+m floating toggle
 
 
 # assign app to workspaces##################
@@ -291,4 +293,5 @@ for_window [class="PacketTracer"] floating enable
 
 for_window [title="tetrio-desktop" window_role="browser-window"] floating enable
 
+for_window [title="Min" window_role="browser-window"] floating enable 10x 15
 
