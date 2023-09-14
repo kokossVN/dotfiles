@@ -102,6 +102,8 @@ require("lazy").setup({
 	{'dcampos/cmp-snippy'},
 	{'hrsh7th/cmp-vsnip'},
 	{'hrsh7th/vim-vsnip'},
+	{'mfussenegger/nvim-jdtls'},
+	{'williamboman/nvim-lsp-installer'},
 
 	-- Nvim-dev --
 	{ "folke/neodev.nvim", opts = {} },

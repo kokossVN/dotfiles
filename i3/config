@@ -250,6 +250,7 @@ exec_always ~/dotfiles/i3/feature/2screen_setup.sh
 # exec_always alacritty -e teamviewer -daemon start
 # keybinding ###############################
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh
+#not Dmenu, is Kmenu
 bindsym $mod+Ctrl+l exec betterlockscreen -l dim
 bindsym $mod+Ctrl+e exec nautilus
 
@@ -268,6 +269,7 @@ bindsym $mod+Ctrl+space  scratchpad show
 bindsym $mod+Shift+n  scratchpad show, floating toggle
 bindsym $mod+n move scratchpad
 bindsym $mod+m floating toggle
+bindsym $mod+period exec rofimoji
 
 
 # assign app to workspaces##################
