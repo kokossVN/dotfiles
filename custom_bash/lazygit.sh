@@ -2,7 +2,7 @@
 nothing() {
 	read -p "There is no message, continue? [*Yy/Nn]"
 	case $REPLY in
-		n)
+		Nn)
 			echo "canceled" 
 			;;
 		*)
