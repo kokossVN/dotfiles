@@ -1,9 +1,10 @@
 #!/bin/sh
 nothing() {
-	read -p "There is no message, continue? [*Yy/Nn]"
+	read -p "There is no message, continue? [*Yy/Nn]: "
 	case $REPLY in
-		Nn)
+		n)
 			echo "canceled" 
+			exit 1
 			;;
 		*)
 			mess="smail change"
