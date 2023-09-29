@@ -1,5 +1,6 @@
 #!/bin/sh
-
+#html v0.2
+#i have no idea what im doin
 
 
 #setting command parameter

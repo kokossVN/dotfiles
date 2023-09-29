@@ -17,8 +17,11 @@ require('PluginConfigs.nvim-comment')------------ gcc or gc to comment
 require('PluginConfigs.colorizer')--------------- Display color when using hex or RGB
 require('PluginConfigs.dap')--------------- Display color when using hex or RGB
 require('PluginConfigs.neodev')--------------- Display color when using hex or RGB
-require('PluginConfigs.jdtls')							--java lspconfig
+-- require('PluginConfigs.jdtls')							--java lspconfig
 -- require('PluginConfigs.bufferline')
 -------------------- Themes ---------------------
 -- require('Themes.catppuccin')
 require('Themes.dracula')
+
+
+-- vim.set_log_level("debug")

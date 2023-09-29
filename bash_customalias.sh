@@ -1,6 +1,7 @@
 #!~/.bashrc
-CURRENT_DEVICE=desktop
 
+
+alias v="nvim"
 alias tmuxatk='tmux attach -t'
 alias vim='nvim'
 alias lolcat='~/dotfiles/custom_bash/center.python3 | lolcat'
@@ -14,9 +15,3 @@ alias tree="lsd --tree -X"
 alias lazyweb="~/dotfiles/custom_bash/lazyweb.sh"
 alias html="~/dotfiles/custom_bash/html.sh"
 alias live-server="live-server --browser=min"
-
-if [[ $CURRENT_DEVICE = desktop ]]
-then
-	alias system_blight="ddcutil setvcp 10"
-	alias system_cont="ddcutil setvcp 12"
-fi
