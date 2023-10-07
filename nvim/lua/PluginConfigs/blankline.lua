@@ -1,20 +1,36 @@
-vim.opt.termguicolors = true
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
-
-vim.opt.list = true
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-    },
+local highlight = {
+    "RainbowRed",
+    "RainbowYellow",
+    "RainbowBlue",
+    "RainbowOrange",
+    "RainbowGreen",
+    "RainbowViolet",
+    "RainbowPink",
 }
+local hooks = require "ibl.hooks"
+-- create the highlight groups in the highlight setup hook, so they are reset
+-- every time the colorscheme changes
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#ff5555" })
+    vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#f1fa8c" })
+    vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#8be9fd" })
+    vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#ffb86c" })
+    vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#50fa7b" })
+    vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#bd93f9" })
+    vim.api.nvim_set_hl(0, "RainbowPink", { fg = "#ff79c6" })
+end)
+
+vim.g.rainbow_delimiters = { highlight = highlight }
+require("ibl").setup {
+	indent = {
+		highlight = highlight,
+	},
+	whitespace = {
+		remove_blankline_trail = false
+	},
+	scope = {
+		enabled = false,
+	}
+}
+
+hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)

@@ -116,4 +116,12 @@ require("lazy").setup({
 	-- Debuger --
 	{'rcarriga/nvim-dap-ui'},
 	{'mfussenegger/nvim-dap'},
+	-- head line --
+	{
+	"willothy/nvim-cokeline",
+	dependencies = {
+		"nvim-lua/plenary.nvim",        -- Required for v0.4.0+
+	},
+	-- config = true
+	}
   })
