@@ -17,7 +17,10 @@ lspconfig.tsserver.setup ({ capabilities = capabilities })
 lspconfig.cssls.setup ({ capabilities = capabilities })
 lspconfig.clangd.setup ({ capabilities = capabilities })
 lspconfig.cssmodules_ls.setup ({ capabilities = capabilities })
+lspconfig.pkgbuild_language_server.setup ({ capabilities = capabilities })
+lspconfig.bashls.setup ({ capabilities = capabilities })
 -- lspconfig.java_language_server.setup ({ capabilities = capabilities })
+
 
 lspconfig.jdtls.setup ({
 	capabilities = capabilities,
