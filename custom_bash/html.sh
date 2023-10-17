@@ -95,6 +95,7 @@ do
 	<link rel=\"stylesheet\" href=\"$i\">"	
 	fi
 done
+echo ${css[@]}
 
 if [ -z $1 ]
 then
