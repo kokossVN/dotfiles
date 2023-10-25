@@ -2,7 +2,7 @@
 CURRENT_DEVICE=desktop
 CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash/
 
-alias tmuxatk="tmux attach -t"
+alias ta="tmux attach -t"
 alias vim="nvim"
 alias lolcat="$CUSTOM_BASH_LOCATION/center.python3 | lolcat"
 alias .file="cd ~/dotfiles"
