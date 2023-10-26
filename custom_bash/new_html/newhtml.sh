@@ -1,6 +1,5 @@
 #!/bin/sh
 
-OUTPUT=
 
 source "./css_js.sh"
 source "./create.sh"
@@ -27,26 +26,34 @@ while true; do
 			echo "SUPER COMMANDDDDDDDDDDD"
 			break
 			;;
-		-F)
+		-cp)
 			shift 1
-			echo "create html file form $1"
+			echo "copy form $1"
+			HTML_TEMPLATE="$1"
 			shift 1
+			;;
+		-t)
+			shift 1
+			custom_title
 			;;
 		-o)
 			shift 1
-			OUTPUT=$1
-			echo "created $1"
+			file_output_check $1
 			;;
 		*)
+			echo "===================================="
+			echo ""
 			echo "css: ${css_list[@]}"
 			echo "js: ${js_list[@]}"
 			echo "other (skip): ${other_list[@]}"
-			echo "ok"
-			break
+			file_name_check $1
+			link_push_to_array
+			html_create
+			nvim $OUTPUT
+			exit 0
 			;;
 	esac
 done
-
 
 
 
