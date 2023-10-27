@@ -1,5 +1,4 @@
 #!~/.bashrc
-CURRENT_DEVICE=desktop
 CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash/
 
 alias tmuxatk="tmux attach -t"
@@ -18,8 +17,3 @@ alias live-server="live-server --browser=min"
 alias cexe="$CUSTOM_BASH_LOCATION/cexe.sh"
 alias cppexe="$CUSTOM_BASH_LOCATION/cppexe.sh"
 
-if [[ $CURRENT_DEVICE = desktop ]]
-then
-	alias system_blight="ddcutil setvcp 10"
-	alias system_cont="ddcutil setvcp 12"
-fi
