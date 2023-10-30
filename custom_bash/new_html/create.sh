@@ -45,11 +45,13 @@ html_create() {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>$title</title>
+			<!-- this_comment_for_css_import -->
 			$css
 		</head>
 		<body>
 			<p>Hello $OUTPUT</p>
 			$js
+			<!-- this_comment_for_js_import -->
 		</body>
 		</html>" > $OUTPUT
 	else

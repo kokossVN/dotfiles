@@ -14,7 +14,7 @@ while true; do
 			echo "import file"
 			shift 1
 			while [[ true ]]; do
-				if [[ -e $1 && -z $i ]]; then
+				if [[ -e $1]]; then
 						html_push $1
 						shift 1
 					else
