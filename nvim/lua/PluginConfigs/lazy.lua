@@ -118,10 +118,12 @@ require("lazy").setup({
 	{'mfussenegger/nvim-dap'},
 	-- head line --
 	{
-	"willothy/nvim-cokeline",
-	dependencies = {
-		"nvim-lua/plenary.nvim",        -- Required for v0.4.0+
+		"willothy/nvim-cokeline",
+		dependencies = {
+			"nvim-lua/plenary.nvim",        -- Required for v0.4.0+
 	},
 	-- config = true
-	}
+	},
+	--formater
+	{"mhartington/formatter.nvim"},
   })
