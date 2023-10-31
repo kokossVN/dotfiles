@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+
+source "$this_location/from_template.sh"
 # custom title
 custom_title() {
 	read -p "Title name:" title
@@ -8,6 +11,9 @@ custom_title() {
 
 #name check
 file_name_check() {
+	if [[ $last = *.html ]]; then
+		OUTPUT=$last
+	fi
 	if [[ -z $1 ]]; then
 		if [[ -z $OUTPUT ]]; then
 			read -p "File name: " 
@@ -18,12 +24,25 @@ file_name_check() {
 	fi
 }
 
+#push func should be shift until next cmd parameter or 
+#last element, this function will take lastest array
+#for output check
+double_double_check() {
+	for last in $@ ; do
+		true
+	done
+	echo " parameter $last"
+}
+
+#ask for name 
+#its exit error if nothing in
 file_output_check() {
-	if [[ "$(echo "$1" | grep -ic "\.html")" -eq 1 ]]; then
+	if [[ $1 = *.html ]]; then
 		OUTPUT="$1"
-	elif [[ 
-		"$(echo "$1" | grep -ic "\.css")" -eq 1 ||
-		"$(echo "$1" | grep -ic "\.js")" -eq 1 ]]
+	elif [[
+		$1 = *.css ||
+		$1 = *.js
+		]];
 		then
 			echo "WTF you mean?"
 			exit 1
@@ -33,11 +52,16 @@ file_output_check() {
 	echo "Created $OUTPUT"
 }
 
+#simple HTML template ( from VScode)
+#with yzal tool
 html_create() {
 	if [[ -z $title ]]; then
 		title=$(echo "${OUTPUT%*.html}") 
 	fi
-	if [[ -z $HTML_TEMPLATE  ]]; then
+	if [[ ! -z $TEMPLATE_FILE  ]]; then
+		echo "Template help me do this sh*t"
+		template_do
+	else
 		echo \
 		"<!DOCTYPE html>
 		<html lang="en">
@@ -45,16 +69,27 @@ html_create() {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>$title</title>
-			<!-- this_comment_for_css_import -->
-			$css
+			<!-- K_css_in -->
+			$cssPluginConfigs/formater.lua
 		</head>
 		<body>
 			<p>Hello $OUTPUT</p>
 			$js
-			<!-- this_comment_for_js_import -->
+			<!-- K_js_in -->
 		</body>
 		</html>" > $OUTPUT
-	else
-		echo "Template help me do this sh*t"
 	fi
+}
+
+ask_for_open_nvim() {
+	read -p "wanna open vim [yY*|nN] " aws
+	case $aws in
+		n|N)
+			exit 0
+			;;
+		y|Y|*)
+			nvim $OUTPUT
+			;;
+	esac
+
 }

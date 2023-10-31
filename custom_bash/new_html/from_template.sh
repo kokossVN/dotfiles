@@ -1,27 +1,34 @@
 #!/usr/bin/env bash
 
-js_value="<!-- this_comment_for_js_import -->"
-css_value="<!-- this_comment_for_css_import -->"
-
-get_temp(){
-	if [[ -e $1 && $(echo "$1" | grep -ic "\.html") -eq 1 ]]; then
-		TEMPLATE_FILE="$1"
-	else
-		echo "missing or is not HTML, skip"
-		exit 1
-	fi
-}
-
-copy() {
+#make a copy
+template_copy() {
+	echo "copied from $TEMPLATE_FILE"
 	cp $TEMPLATE_FILE $OUTPUT
 }
 
+# use sed to find and replace word in file in single commmand
 find_and_replace() {
-	if [[ $(cat $OUTPUT | grep -ic "$css_value" -eq 1 )]]; then
-		echo "message"
+	sed -i "/<title>/c\ \\t\<title>$title</title>" $OUTPUT
+	if [[ $(cat $OUTPUT | grep -ic "k_") -eq 2 ]]; then
+		sed -i "/K_css/c\ $sed_css" $OUTPUT | sed ":a;N;$ba;s/\n/\n/g"
+		sed -i "/K_js/c\ $sed_js" $OUTPUT | sed ":a;N;$ba;s/\n/\n/g"
+	else
+		cat -n $OUTPUT
+		read -p "Chose line for css" css_line
+		read -p "Chose line for js" js_line
+		sed -i "$css_line i \ $sed_css " $OUTPUT | sed ":a;N;$ba;s/\n/\n/g"
+		sed -i "$js_line i \ $sed_js " $OUTPUT | sed ":a;N;$ba;s/\n/\n/g"
 	fi
 }
 
 
+#to-do function
+template_do() {
+	template_copy
+	# for debug
+	ls | read -p "next"
+	echo "OUTPUT: $OUTPUT"
+	read -p "next"
+	find_and_replace
 
-
+}
