@@ -16,4 +16,5 @@ alias html="~/dotfiles/custom_bash/html.sh"
 alias live-server="live-server --browser=min"
 alias cexe="$CUSTOM_BASH_LOCATION/cexe.sh"
 alias cppexe="$CUSTOM_BASH_LOCATION/cppexe.sh"
+alias v="nvim"
 
