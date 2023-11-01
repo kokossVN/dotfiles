@@ -13,8 +13,8 @@ find_and_replace() {
 		sed -i "/K_css/c\ $sed_css" $OUTPUT | sed ":a;N;$ba;s/\n/\n/g"
 		sed -i "/K_js/c\ $sed_js" $OUTPUT | sed ":a;N;$ba;s/\n/\n/g"
 	else
-		cat -n $OUTPUT
 		if [[ ! -z $css_list ]]; then
+		cat -n $OUTPUT
 			read -p "Chose line for css" css_line
 			if [[ -z css_line ]]; then
 				css_line=7

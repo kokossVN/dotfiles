@@ -59,7 +59,7 @@ html_create() {
 		title=$(echo "${OUTPUT%*.html}") 
 	fi
 	if [[ ! -z $TEMPLATE_FILE  ]]; then
-		echo "Template help me do this sh*t"
+		# echo "Template help me do this sh*t"
 		template_do
 	else
 		echo \
@@ -70,7 +70,7 @@ html_create() {
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>$title</title>
 			<!-- K_css_in -->
-			$cssPluginConfigs/formater.lua
+			$css
 		</head>
 		<body>
 			<p>Hello $OUTPUT</p>

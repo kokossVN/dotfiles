@@ -54,7 +54,6 @@ push_resault() {
 # then make tag
 # this array will push into  target HTML file after all
 #if found template file, all array will push into sed cmd
-:wa
 
 
 link_push_to_array(){
