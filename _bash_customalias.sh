@@ -3,6 +3,7 @@ CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash/
 
 alias tmuxatk="tmux attach -t"
 alias vim="nvim"
+alias v="nvim"
 alias lolcat="$CUSTOM_BASH_LOCATION/center.python3 | lolcat"
 alias .file="cd ~/dotfiles"
 alias discord="flatpak run com.discordapp.Discord"
@@ -17,5 +18,4 @@ alias html="~/dotfiles/custom_bash/new_html/newhtml.sh"
 alias live-server="live-server --browser=min"
 alias cexe="$CUSTOM_BASH_LOCATION/cexe.sh"
 alias cppexe="$CUSTOM_BASH_LOCATION/cppexe.sh"
-alias v="nvim"
-
+alias mvmk="$CUSTOM_BASH_LOCATION/my_mv.sh"

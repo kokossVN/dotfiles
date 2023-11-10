@@ -69,8 +69,8 @@ html_create() {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>$title</title>
-			<!-- K_css_in -->
 			$css
+			<!-- K_css_in -->
 		</head>
 		<body>
 			<p>Hello $OUTPUT</p>

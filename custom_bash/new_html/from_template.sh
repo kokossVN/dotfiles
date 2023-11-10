@@ -15,7 +15,7 @@ find_and_replace() {
 	else
 		if [[ ! -z $css_list ]]; then
 		cat -n $OUTPUT
-			read -p "Chose line for css" css_line
+			read -p "Chose line for css [7]  " css_line
 			if [[ -z css_line ]]; then
 				css_line=7
 			fi

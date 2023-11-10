@@ -11,7 +11,7 @@ source "$this_location/superhtml.sh"
 #setting command parameter
 double_double_check $@
 
-while true; do
+while [ true ] ; do
 	case $1 in
 		-i)
 			echo "import file"
