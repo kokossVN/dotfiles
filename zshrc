@@ -11,7 +11,8 @@ source ~/Repos/znap/znap.zsh  # Start Znap
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-EDITOR=nvim; export EDITOR
+export EDITOR=nvim;
+export CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash/
 
 plugins=(
   git
@@ -32,6 +33,5 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
 
-# neofetch
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
