@@ -32,6 +32,6 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
-
+eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
