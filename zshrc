@@ -12,7 +12,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 export EDITOR=nvim;
-export CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash/
 
 plugins=(
   git
@@ -27,11 +26,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/bash_customalias.sh
+source ~/dotfiles/env.sh
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
-eval "$(zoxide init zsh)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh)"
+eval "$(tmuxifier init -)"
+
+return 0
