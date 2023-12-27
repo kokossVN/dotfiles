@@ -26,7 +26,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/bash_customalias.sh
-source ~/dotfiles/env.sh
+source ~/dotfiles/.env
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
