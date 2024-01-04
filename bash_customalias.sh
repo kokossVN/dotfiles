@@ -1,5 +1,5 @@
 #!~/.bashrc
-CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash/
+CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash
 
 alias tmuxatk="tmux attach -t"
 alias vim="nvim"
@@ -22,3 +22,4 @@ alias mobicam="$CUSTOM_BASH_LOCATION/scrcpy_camera.sh"
 alias javaproj="$CUSTOM_BASH_LOCATION/java_proj/java-proj.sh"
 alias javex="$CUSTOM_BASH_LOCATION/javex/javex.sh"
 alias set_blight="$CUSTOM_BASH_LOCATION/kokoss_backlight.sh"
+alias arcaea="$CUSTOM_BASH_LOCATION/arcaea.sh"

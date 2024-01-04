@@ -4,8 +4,7 @@
 
 local keymaps = vim.keymap.set
 local opts = { silent = true, noremap = true }
-
-keymaps("i", "jk", "<ESC>", opts)
+keymaps("i", "jk", "<ESC>")
 keymaps("n", "<TAB>", ":tabnext<CR>", opts)
 keymaps("n", "<S-TAB>", ":tabprev<CR>", opts)
 keymaps("n", "=", "<C-a>", opts)
@@ -14,3 +13,5 @@ keymaps("i", "<A-h>", "<Left>")
 keymaps("i", "<A-j>", "<Down>")
 keymaps("i", "<A-k>", "<Up>")
 keymaps("i", "<A-l>", "<Right>")
+keymaps("i", "<ESC>", "`")
+keymaps("i", "`", "~")
