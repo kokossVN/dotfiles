@@ -1,0 +1,11 @@
+import = ["~/dotfiles/alacritty/alacritty-master/dracula.toml"]
+
+[font]
+size = 13.5
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[window]
+opacity = 0.90

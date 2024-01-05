@@ -44,16 +44,14 @@ bind R source-file ~/.config/tmux/tmux.conf
 
 
 #theme config
-set -g @dracula-plugins "cpu-usage ram-usage "
-set -g @dracula-show-empty-plugins false
+set -g @dracula-plugins "battery cpu-usage ram-usage "
 #time
 set -g @dracula-day-month true
 set -g @dracula-show-timezone false
-#refesh rate 
-set -g @dracula-refresh-rate 5
-#color and icon
+
+#cpu-usage + ram-usager
 set -g @dracula-cpu-usage-label "󰍛"
-set -g @dracula-cpu-usage-colors "dark_gray pink"
 set -g @dracula-ram-usage-label ""
-set -g @dracula-ram-usage-colors "dark_gray cyan"
 set -g @dracula-show-powerline true
+# set -g @dracule-show-right-sep 
+# set -g @dracula-show-left-sep 

@@ -50,10 +50,11 @@ set -g @dracula-show-empty-plugins false
 set -g @dracula-day-month true
 set -g @dracula-show-timezone false
 #refesh rate 
-set -g @dracula-refresh-rate 5
+set -g @dracula-refresh-rate 20
 #color and icon
 set -g @dracula-cpu-usage-label "󰍛"
 set -g @dracula-cpu-usage-colors "dark_gray pink"
 set -g @dracula-ram-usage-label ""
 set -g @dracula-ram-usage-colors "dark_gray cyan"
 set -g @dracula-show-powerline true
+

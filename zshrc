@@ -23,6 +23,7 @@ plugins=(
   ruby
   zsh-autosuggestions
 )
+
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/bash_customalias.sh
 source ~/dotfiles/.env
