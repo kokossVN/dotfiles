@@ -44,7 +44,7 @@ bind R source-file ~/.config/tmux/tmux.conf
 
 
 #theme config
-set -g @dracula-plugins "cpu-usage ram-usage "
+set -g @dracula-plugins ""
 set -g @dracula-show-empty-plugins false
 #time
 set -g @dracula-day-month true
