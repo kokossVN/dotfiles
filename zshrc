@@ -25,13 +25,19 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/bash_customalias.sh
-source ~/dotfiles/.env
+source ~/dotfiles/env.sh
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export QT_FONT_DPI=96
-
+# fix Fcitx5
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
+
+#fix Wayland
+export QT_QPA_PLATFORM=wayland
+export XDG_CURRENT_DESKTOP=Hyprland
+export MOZ_ENABLE_WAYLAND=1
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6272A4,underline"
