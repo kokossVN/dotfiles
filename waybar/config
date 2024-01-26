@@ -9,7 +9,13 @@
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["pulseaudio", "network", "backlight", "clock", "tray"],
     // Modules configuration
-
+    "hyprland/workspaces" : {
+        "all-outputs" : true,
+        // "show-special" : true,
+        "format" : "{icon}",
+        "format-icons" : {
+          }
+      },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
