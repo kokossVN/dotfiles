@@ -16,16 +16,17 @@ export EDITOR=nvim;
 plugins=(
   git
   bundler
-  dotenv
+  # dotenv
   rake
   rbenv
   ruby
   zsh-autosuggestions
+  fzf-zsh-plugin
 )
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/bash_customalias.sh
-source ~/dotfiles/env.sh
+source ~/dotfiles/.env
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export QT_FONT_DPI=96
 # fix Fcitx5
