@@ -1,17 +1,13 @@
-#!~/.bashrc
-CUSTOM_BASH_LOCATION=~/dotfiles/custom_bash
-
+#!/usr/bin/env bash
+CUSTOM_BASH_LOCATION="$HOME/dotfiles/custom_bash"
 alias tmuxatk="tmux attach -t"
 alias vim="nvim"
 alias v="nvim"
 alias .file="cd ~/dotfiles"
-# alias lazygit="$CUSTOM_BASH_LOCATION/lazygit.sh"
 alias ls="lsd"
 alias l="lsd -Fl"
 alias ide="$CUSTOM_BASH_LOCATION/tmux-ide.sh"
 alias tree="lsd --tree -X"
-# alias lazyweb="$CUSTOM_BASH_LOCATION/lazyweb.sh"
-# alias html="~/dotfiles/custom_bash/html.sh"
 alias html="~/dotfiles/custom_bash/new_html/newhtml.sh"
 alias live-server="live-server --browser=chromium"
 alias cexe="$CUSTOM_BASH_LOCATION/cexe.sh"
@@ -22,7 +18,6 @@ alias javaproj="$CUSTOM_BASH_LOCATION/java_proj/java-proj.sh"
 alias javex="$CUSTOM_BASH_LOCATION/javex/javex.sh"
 alias set_blight="$CUSTOM_BASH_LOCATION/kokoss_backlight.sh"
 alias arcaea="$CUSTOM_BASH_LOCATION/arcaea.sh"
-[[ -r ~/.config/tmux/tmux.conf ]] || alias tmux="$CUSTOM_BASH_LOCATION/tmux-profile.sh"
 alias tmux-profile="$CUSTOM_BASH_LOCATION/tmux-profile.sh"
 alias .learn="cd ~/learn"
 alias get_screenshot="$CUSTOM_BASH_LOCATION/screenshot.sh"
