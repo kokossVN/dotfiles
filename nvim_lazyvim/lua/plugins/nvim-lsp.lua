@@ -18,6 +18,7 @@ return {
           "pug",
           "typescriptreact",
           "vue",
+          "php",
         },
       },
       -- pyright will be automatically installed with mason and loaded with lspconfig

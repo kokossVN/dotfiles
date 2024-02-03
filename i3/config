@@ -269,7 +269,7 @@ bindsym $mod+Ctrl+space  scratchpad show
 bindsym $mod+Shift+n  scratchpad show, floating toggle
 bindsym $mod+n move scratchpad
 bindsym $mod+m floating toggle
-bindsym $mod+period exec rofimoji
+bindsym $mod+period exec rofimoji -a copy
 
 
 # assign app to workspaces##################
