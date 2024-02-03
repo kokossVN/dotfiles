@@ -1,2 +1,3 @@
 # dotfiles
-my frist dotfiles 
+This is dotfiles for laptop
+

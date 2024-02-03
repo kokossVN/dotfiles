@@ -5,3 +5,7 @@
 local set = vim.api.nvim_set_option
 
 set("term", "screen-256color")
+
+vim.wo.wrap = true
+vim.wo.linebreak = true
+vim.opt.mouse = ""
