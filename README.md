@@ -1,3 +1,3 @@
 # dotfiles
-This is dotfiles for laptop!
+My frist dotfiles
 
