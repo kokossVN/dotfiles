@@ -8,7 +8,6 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -154,7 +153,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -233,6 +232,8 @@ bindsym Mod1+Ctrl+Shift+S exec --no-startup-id maim --select | xclip -selection 
 
 
 # exec_always alacritty
+
+exec_always i3-layouts
 #open unikey
 exec_always fcitx5
 #install background
@@ -244,15 +245,19 @@ exec_always redshift -P -O 2257
 #picom 
 exec_always picom --config ~/dotfiles/picom.conf 
 #start teamviewer daemon
-#This command will lauch when laptop connect to another screen
-exec_always ~/dotfiles/i3/feature/2screen_setup.sh
+#This command will lauch when laptop connect to another screen 
+# update change script to rofi ( rofitor )
+# exec_always ~/dotfiles/i3/feature/2screen_setup.sh
 
 # exec_always alacritty -e teamviewer -daemon start
+
 # keybinding ###############################
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh
-#not Dmenu, is Kmenu
+bindsym $mod+Shift+e exec "~/dotfiles/rofi/applets/bin/powermenu.sh"
+bindsym $mod+Shift+p exec "~/dotfiles/rofi/applets/bin/screenselector.sh"
+#not Dmenu, is Rofi
+bindsym $mod+d exec "~/dotfiles/rofi/launchers/launcher.sh"
 bindsym $mod+Ctrl+l exec betterlockscreen -l dim
-bindsym $mod+Ctrl+e exec nautilus
+# bindsym $mod+Ctrl+e exec thunar
 
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
