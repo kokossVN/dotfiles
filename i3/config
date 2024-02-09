@@ -237,7 +237,7 @@ exec_always i3-layouts
 #open unikey
 exec_always fcitx5
 #install background
-exec_always feh --bg-scale --zoom fill  --randomize  ~/dotfiles/wp
+exec_always feh --bg-scale --zoom fill  --randomize  ~/wp
 #polybar
 exec_always ~/.config/polybar/lauch.sh
 #nightlight
@@ -247,13 +247,13 @@ exec_always picom --config ~/dotfiles/picom.conf
 #start teamviewer daemon
 #This command will lauch when laptop connect to another screen 
 # update change script to rofi ( rofitor )
-# exec_always ~/dotfiles/i3/feature/2screen_setup.sh
+exec_always ~/dotfiles/i3/feature/2screen_setup.sh
 
 # exec_always alacritty -e teamviewer -daemon start
 
 # keybinding ###############################
-bindsym $mod+Shift+e exec "~/dotfiles/rofi/applets/bin/powermenu.sh"
-bindsym $mod+Shift+p exec "~/dotfiles/rofi/applets/bin/screenselector.sh"
+bindsym $mod+Shift+e exec "~/dotfiles/rofi/applets/bin/powermenu.sh 2 1"
+bindsym $mod+Shift+p exec "~/dotfiles/rofi/applets/bin/monitor.sh"
 #not Dmenu, is Rofi
 bindsym $mod+d exec "~/dotfiles/rofi/launchers/launcher.sh"
 bindsym $mod+Ctrl+l exec betterlockscreen -l dim

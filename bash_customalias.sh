@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-CUSTOM_BASH_LOCATION="$HOME/dotfiles/custom-bash"
+CUSTOM_BASH_LOCATION="$HOME"/dotfiles/custom-bash
 alias tmuxatk="tmux attach -t"
 alias vim="nvim"
 alias v="nvim"
@@ -23,5 +23,6 @@ alias javex="$CUSTOM_BASH_LOCATION/javex/javex.sh"
 alias arcaea="$CUSTOM_BASH_LOCATION/arcaea.sh"
 alias tmux-profile="$CUSTOM_BASH_LOCATION/tmux-profile.sh"
 # alias get_screenshot="$CUSTOM_BASH_LOCATION/screenshot.sh"
-alias work="$CUSTOM_BASH_LOCATION/tmux-fzf/tmux-workspace.sh"
+alias work="$CUSTOM_BASH_LOCATION/tmux-workspace.sh"
 alias multi-rename="$CUSTOM_BASH_LOCATION/multiple-rename.sh"
+alias rofitor="~/dotfiles/rofi/applets/bin/monitor.sh 1 1"
