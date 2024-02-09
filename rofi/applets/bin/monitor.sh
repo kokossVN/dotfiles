@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 
 # Import Current Theme
-type="$HOME/.config/rofi/applets/type-$1"
-style="style-$2.rasi"
+type="$HOME/.config/rofi/applets/type-${1:-2}"
+style="style-${2:-1}.rasi"
 theme="$type/$style"
 #
 DISPLAY_LIST=($(xrandr | grep -w 'connected' | awk '{print $1}'))
+intern=${DISPLAY_LIST[0]}
+extern=${DISPLAY_LIST[1]}
+same_res="1280x720"
 
 # Theme Elements
 prompt="Screen mode"
-mesg="Screen connected (Main Screen: ${DISPLAY_LIST[0]}): $(echo ${DISPLAY_LIST[@]} |
+mesg="Screen connected (Main Screen:$intern): $(echo ${DISPLAY_LIST[@]} |
 	sed 's/\ /\,/g')"
 OPT_LIST=()
 layout=$(cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2)
@@ -72,13 +75,14 @@ run_rofi() {
 }
 #
 # Execute Command
-
+# Default
 # Actions
 dosmt() {
 	if [[ -z ${DISPLAY_LIST[1]} ]]; then
 		case "$1" in
 		${OPT_LIST[0]})
-			echo "Nothing :D"
+			echo "Nothing Happend :D"
+			xrandr --output "$intern" --primary --auto
 			;;
 		${OPT_LIST[1]})
 			arandr
@@ -89,22 +93,22 @@ dosmt() {
 		esac
 	else
 		case "$1" in
-		${OPT_LIST[0]})
-			echo "Nothing :D"
+		${OPT_LIST[0]}) #only intern
+			xrandr --output "$intern" --primary --auto --output "$extern" --off
 			;;
-		${OPT_LIST[1]})
-			echo "opt 1"
+		${OPT_LIST[1]}) #mirror
+			xrandr --output "$intern" --primary --mode $same_res --output "$extern" --mode $same_res --same-as "$intern"
 			;;
-		${OPT_LIST[2]})
-			echo "opt 2"
+		${OPT_LIST[2]}) #only extern
+			xrandr --output "$extern" --auto --output "$intern" --off
 			;;
-		${OPT_LIST[3]})
-			echo "opt 3"
+		${OPT_LIST[3]}) # int left ext right
+			xrandr --output "$intern" --primary --auto --output "$extern" --auto --right-of "$intern"
 			;;
-		${OPT_LIST[4]})
-			echo "opt 4"
+		${OPT_LIST[4]}) # ext left int right
+			xrandr --output "$intern" --primary --auto --output "$extern" --auto --right-of "$intern"
 			;;
-		${OPT_LIST[5]})
+		${OPT_LIST[5]}) #Arandr
 			arandr
 			;;
 		*)
@@ -113,6 +117,7 @@ dosmt() {
 		esac
 	fi
 }
-echo ${#OPT_LIST[@]}
 chosen="$(run_rofi)"
 dosmt "$chosen"
+echo "Done :D"
+feh --bg-scale --zoom fill --randomize ~/wp || echo "Maybe your wp folder deleted  :("
