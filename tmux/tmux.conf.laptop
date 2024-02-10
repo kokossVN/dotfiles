@@ -44,10 +44,10 @@ bind R source-file ~/.config/tmux/tmux.conf
 
 
 #theme config
-set -g @dracula-plugins "battery cpu-usage ram-usage "
+set -g @dracula-plugins "cpu-usage ram-usage "
 #time
-set -g @dracula-day-month true
-set -g @dracula-show-timezone false
+# set -g @dracula-day-month true
+# set -g @dracula-show-timezone false
 
 #cpu-usage + ram-usager
 set -g @dracula-cpu-usage-label "󰍛"
