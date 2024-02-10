@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-CUSTOM_BASH_LOCATION="$HOME"/dotfiles/custom-bash
+CUSTOM_BASH_LOCATION="$HOME"/dotfiles/scripts
 alias tmuxatk="tmux attach -t"
 alias vim="nvim"
 alias v="nvim"

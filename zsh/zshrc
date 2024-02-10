@@ -38,7 +38,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/dotfiles/bash_customalias.sh
+source ~/dotfiles/zsh/bash_customalias.sh
 source ~/dotfiles/.env
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export QT_FONT_DPI=96
