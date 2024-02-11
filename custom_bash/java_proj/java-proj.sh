@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source "$DOTFILE_CUSTOM_BASH/java_proj/java_proj_lib.sh"
+source "/home/kokoss/dotfiles/custom_bash/java_proj/java_proj_lib.sh"
 
 function menu() {
 	echo "Java Project Manager by Kokoss"
