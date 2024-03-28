@@ -101,3 +101,4 @@ vim.keymap.set('n','<C-Left>',':TmuxNavigateLeft<CR>',{silent = true})
 vim.keymap.set('n','<C-Down>',':TmuxNavigateDown<CR>',{silent = true})
 vim.keymap.set('n','<C-Up>',':TmuxNavigateUp<CR>',{silent = true})
 vim.keymap.set('n','<C-Right>',':TmuxNavigateRight<CR>',{silent = true})
+-- vim.g.unikey_bydefault=true

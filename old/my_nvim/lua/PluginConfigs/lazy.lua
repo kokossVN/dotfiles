@@ -126,4 +126,5 @@ require("lazy").setup({
 	},
 	--formater
 	{"mhartington/formatter.nvim"},
+	{"kokossVN/unikey-fcitx.nvim"},
   })
